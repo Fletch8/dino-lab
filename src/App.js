@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // name and store vars b4 return statement
+  const name = "Fletcher";
+
+  const post = {
+    title: "Dinosaurs are awesome",
+    author: "Stealthy Stegosaurus",
+    body: "Check out this body property!",
+    commnets: ["First!", "Great post", "Hire this author now!"]
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* can use varibles with curly brackets */}
+      <p>{name}</p>
+      <h1>{post.title}</h1>
+      <p>{post.author}</p>
+      <p>{post.body}</p>
+      <h2>Comments:</h2>
+      <p>{post.commnets[0]}</p>
+
     </div>
   );
 }
